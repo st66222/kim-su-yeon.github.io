@@ -1,0 +1,912 @@
+@charset "utf-8"; @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap'); html {
+    cursor: url(../images/mouse.png), auto
+}
+
+body {
+    font-family: 'Noto Sans KR',sans-serif;
+    color: #2b2b2b;
+}
+
+#wrap {
+    width: 100%;
+    min-width: 1200px;
+}
+
+::selection {
+    background-color: #bbdcfb;
+}
+
+/* header */
+header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.5);
+}
+
+header.active {
+    top: 0;
+}
+
+header>.container>nav {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+    width: 1200px;
+    height: 60px;
+}
+
+header>.container>nav>.gnb {
+    widows: 1200px;
+}
+
+header>.container>nav>.gnb>li {
+    float: left;
+    width: 200px;
+}
+
+header>.container>nav>.gnb>li>a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+header>.container>nav>.gnb>li:hover>a,header>.container>nav>.gnb>li>a:focus,header>.container>nav>.gnb>li.on>a {
+    color: #425a73;
+}
+
+/* section - home */
+#home {
+    width: 100%;
+    height: 960px;
+    background-image: url(../images/배너사진2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#home>.container {
+    position: relative;
+    width: 1200px;
+    height: 960px;
+    margin: 0 auto;
+}
+
+#home>.container>p {
+    position: absolute;
+    top: 60px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#home>.container>p:nth-child(1) {
+    top: 26px;
+    left: 60px;
+}
+
+#home>.container>p:nth-child(2) {
+    right: 60px;
+    transform: rotate(90deg);
+}
+
+#home>.container>h1 {
+    position: absolute;
+    left: 60px;
+    bottom: 210px;
+    font-weight: 700;
+    font-size: 135px;
+    color: #425a73;
+    line-height: 0.9;
+    letter-spacing: -3px;
+}
+
+#home>.container>h1>.name {
+    position: absolute;
+    left: 300px;
+    bottom: 70px;
+    display: block;
+    width: 390px;
+    height: 194px;
+    text-indent: -9999px;
+
+}
+
+/* section - aboutme */
+#aboutme {
+    position: relative;
+    width: 100%;
+    height: 960px;
+}
+
+#aboutme>.content1-left {
+    float: left;
+    height: 960px;
+}
+
+#aboutme>.content1-left>h2 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -540px;
+    z-index: 10;
+    font-size: 70px;
+    font-weight: 500;
+    color:  #425a73;
+    letter-spacing: 1px;
+}
+
+#aboutme>.content1-left>a {
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    margin-left: -540px;
+    z-index: 20;
+    display: block;
+    width: 358px;
+    height: 460px;
+    text-align: justify;
+}
+
+#aboutme>.content1-left>a>p.img {
+    width: 358px;
+    height: 430px;
+    text-indent: -9999px;
+    background-image: url(../images/전주.jpg);
+}
+
+#aboutme>.content1-left>a>p.link {
+    width: 358px;
+    height: 50px;
+    line-height: 50px;
+    color: #f49389;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+#aboutme>.content1-left>.about_bg {
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+    width: 700px;
+    height: 570px;
+    background-color: rgba(158,213,246,0.3);
+}
+
+#aboutme>.content1-right {
+    position: absolute;
+    top: 290px;
+    right: 35%;
+    margin-right: -600px;
+    float: left;
+    width: 650px;
+    height: 430px;
+}
+
+#aboutme>.content1-right>.profile {
+    width: 650px;
+    height: 280px;
+}
+
+#aboutme>.content1-right>.profile>ul {
+    position: relative;
+    width: 650px;
+    height: 280px;
+}
+
+#aboutme>.content1-right>.profile>ul>li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 650px;
+    height: 280px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+#aboutme>.content1-right>.profile>ul>li:not(:first-child) {
+    display: none;
+}
+
+#aboutme>.content1-right>.profile>button {
+    outline: none;
+    border: none;
+    background: none;
+    width: 21px;
+    height: 41px;
+    text-indent: -9999px;
+    background-image: url(../images/sprite.png);
+}
+
+#aboutme>.content1-right>.profile>.prev {
+    position: absolute;
+    top: -42px;
+    right: 50%;
+    margin-right: -303px;
+    background-position: 0 0;
+}
+
+#aboutme>.content1-right>.profile>.next {
+    position: absolute;
+    top: -42px;
+    right: 50%;
+    margin-right: -335px;
+    background-position: -31px 0;
+}
+
+#aboutme>.content1-right>.profile>.prev:hover,#aboutme>.content1-right>.profile>.prev.on {
+    background-position: 0 -42px;
+}
+
+#aboutme>.content1-right>.profile>.next:hover,#aboutme>.content1-right>.profile>.next.on {
+    background-position: -31px -42px;
+}
+
+#aboutme>.content1-right>.tag {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 650px;
+    height: 100px;
+}
+
+#aboutme>.content1-right>.tag>ul>li {
+    float: left;
+    height: 40px;
+    line-height: 26px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#aboutme>.content1-right>.tag>ul>li:first-child,#aboutme>.content1-right>.tag>ul>li:nth-child(6) {
+    margin-left: 0;
+}
+
+#aboutme>.content1-right>.tag>ul>li>a {
+    display: block;
+    padding: 7px;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+}
+
+#aboutme>.content1-right>.tag>ul>li:hover>a,#aboutme>.content1-right>.tag>ul>li>a:focus,#aboutme>.content1-right>.tag>ul>li.on>a {
+    background-color: #706564;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 18px;
+}
+
+#aboutme>.content1-right>.tag>ul>li:hover>a:active {
+    background-color: #bbdcfb;
+}
+
+/* section - skills */
+#skills {
+    width: 1200px;
+    height: 960px;
+    margin: 0 auto;
+}
+
+#skills>h2 {
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: 500;
+    color: #425a73;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#skills>h2:first-child {
+    padding-top: 200px;
+}
+
+#skills>.skill {
+    width: 585px;
+    margin: 0 auto 150px;
+}
+
+#skills>.skill>li {
+    float: left;
+    height: 115px;
+    margin-left: 20px;
+    text-indent: -9999px;
+}
+
+#skills>.skill>li:nth-child(1) {
+    margin-left: 0;
+    width: 85px;
+    background-image: url(../images/.jpg);
+}
+
+#skills>.skill>li:nth-child(2) {
+    width: 85px;
+    background-image: url(../images/skills_2.png);
+}
+
+#skills>.skill>li:nth-child(3) {
+    width: 85px;
+    background-image: url(../images/skills_3.png);
+}
+
+#skills>.skill>li:nth-child(4) {
+    width: 270px;
+    background-image: url(../images/skills_4.png);
+}
+
+#skills>.tool {
+    width: 645px;
+    margin: 0 auto;
+}
+
+#skills>.tool>li {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+    text-indent: -9999px;
+}
+
+#skills>.tool>li:nth-child(1) {
+    margin-left: 0;
+    background-image: url(../images/skills_tool_1.png);
+}
+
+#skills>.tool>li:nth-child(2) {
+    background-image: url(../images/skills_tool_2.png);
+}
+
+#skills>.tool>li:nth-child(3) {
+    background-image: url(../images/skills_tool_3.png);
+}
+
+#skills>.tool>li:nth-child(4) {
+    background-image: url(../images/skills_tool_4.png);
+}
+
+#skills>.tool>li:nth-child(5) {
+    background-image: url(../images/skills_tool_5.png);
+}
+
+#skills>.tool>li:nth-child(6) {
+    background-image: url(../images/skills_tool_6.png);
+}
+
+#skills>.tool>li:nth-child(7) {
+    background-image: url(../images/skills_tool_7.png);
+}
+
+/* section - portfolio + popup gallery*/
+#portfolio>.portfolio_bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#portfolio>.portfolio_bg>.portfolio_img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 310;
+    margin: -400px 0 0 -450px;
+    width: 900px;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+#portfolio>.portfolio_bg>.portfolio_img>.viewClose {
+    display: block;
+    height: 4742px;
+    text-indent: -9999px;
+    background-color: #fff;
+}
+
+/* section - portfolio */
+#portfolio {
+    width: 1200px;
+    height: 960px;
+    margin: 0 auto;
+}
+
+#portfolio>h2 {
+    margin-bottom: 20px;
+    padding-top: 200px;
+    font-size: 70px;
+    font-weight: 500;
+    color: #425a73;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#portfolio>.container>.mnu {
+    width: 946px;
+    margin: 0 auto 20px;
+}
+
+#portfolio>.container>.mnu>li {
+    float: left;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#portfolio>.container>.mnu>li:first-child {
+    margin-left: 0;
+}
+
+#portfolio>.container>.mnu>li:first-child:after {
+    content: '';
+}
+
+#portfolio>.container>.mnu>li:after {
+    content: '|';
+    display: block;
+    margin: -25px 0 0 -10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+#portfolio>.container>.mnu>li>a {
+    display: block;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.4s;
+}
+
+#portfolio>.container>.mnu>li:hover>a,#portfolio>.container>.mnu>li>a:focus,#portfolio>.container>.mnu>li.on>a {
+    color: #425a73;
+    font-weight: 700;
+    font-size: 19px;
+    background-color: rgba(158,213,246,0.5);
+    border-radius: 5px;
+}
+
+#portfolio>.container>.view {
+    position: relative;
+    width: 1200px;
+    height: 540px;
+}
+
+#portfolio>.container>.view>li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1040px;
+    height: 380px;
+    padding: 80px;
+}
+
+#portfolio>.container>.view>li:not(:first-child) {
+    display: none;
+}
+
+#portfolio>.container>.view>li>h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#portfolio>.container>.view>li>h3>span {
+    font-size: 22px;
+}
+
+#portfolio>.container>.view>li>p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#portfolio>.container>.view>li>.view_img {
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    width: 480px;
+    height: 384px;
+    text-indent: -9999px;
+    background-image: url(../images/비빔밥2.jpg);
+}
+
+#portfolio>.container>.view>li:nth-child(2)>.view_img {
+    background-image: url(../images/portfolio_line.png);
+}
+
+#portfolio>.container>.view>li:nth-child(3)>.view_img {
+    background-image: url(../images/portfolio_clio.png);
+}
+
+#portfolio>.container>.view>li:nth-child(4)>.view_img {
+    background-image: url(../images/portfolio_090.png);
+}
+
+#portfolio>.container>.view>li:nth-child(5)>.view_img {
+    background-image: url(../images/portfolio_blue.png);
+}
+
+#portfolio>.container>.view>li:nth-child(6)>.view_img {
+    background-image: url(../images/portfolio_howon.png);
+}
+
+#portfolio>.container>.view>li:nth-child(7)>.view_img {
+    background-image: url(../images/portfolio_peach.png);
+}
+
+#portfolio>.container>.view>li>a {
+    float: left;
+    display: block;
+    width: 140px;
+    height: 40px;
+    margin: 100px 10px 0 0;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-size: 500;
+    color: #425a73;
+    background-color: #fff;
+    border: 1px solid #425a73;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+#portfolio>.container>.view>li>a:hover,#portfolio>.container>.view>li>a:focus {
+    color: #fff;
+    background-color: #425a73;
+}
+
+/* section - design */
+#design {
+    position: relative;
+    width: 1200px;
+    height: 960px;
+    margin: 0 auto;
+}
+
+#design>h2 {
+    margin-bottom: 20px;
+    padding-top: 200px;
+    font-size: 70px;
+    font-weight: 500;
+    color: #425a73;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#design>.container {
+    position: relative;
+    overflow: hidden;
+    width: 990px;
+    height: 530px;
+    margin: 0 auto;
+}
+
+#design>.container>ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2970px;
+    height: 530px;
+}
+
+#design>.container>ul>li {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 990px;
+    width: 990px;
+    height: 530px;
+    background-color: #fff;
+}
+
+#design>.container>ul>li>.gallery>li {
+    float: left;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#design>.container>ul>li:first-child {
+    left: 0;
+}
+
+#design>.container>ul>li>.web>li:nth-child(1) {
+    width: 380px;
+    height: 360px;
+    margin-right: 10px;
+    line-height: 360px;
+    background-image: url(../images/비빔밥.jpg);
+}
+
+#design>.container>ul>li>.web>li:nth-child(2) {
+    width: 275px;
+    height: 360px;
+    margin-right: 10px;
+    line-height: 360px;
+    background-image: url(../images/콩나물국밥.jpg);
+}
+
+#design>.container>ul>li>.web>li:nth-child(3) {
+    width: 315px;
+    height: 360px;
+    line-height: 360px;
+    background-image: url(../images/아귀찜.jpg);
+}
+
+#design>.container>ul>li>.web>li:nth-child(4) {
+    width: 665px;
+    height: 160px;
+    margin: 10px 10px 0 0;
+    line-height: 160px;
+    background-image: url(../images/곱창.jpg);
+    ;}
+
+#design>.container>ul>li>.web>li:nth-child(5) {
+    width: 315px;
+    height: 160px;
+    margin-top: 10px;
+    line-height: 160px;
+    background-image: url(../images/순대국밥.jpg);
+}
+
+#design>.container>ul>li>.major>li:nth-child(1) {
+    width: 370px;
+    height: 530px;
+    margin-right: 10px;
+    line-height: 360px;
+    background-image: url(../images/베테랑.jpg);
+}
+
+#design>.container>ul>li>.major>li:nth-child(2) {
+    width: 275px;
+    height: 282px;
+    margin-right: 10px;
+    line-height: 282px;
+    background-image: url(../images/design_1_CI.jpg);
+}
+
+#design>.container>ul>li>.major>li:nth-child(3) {
+    width: 325px;
+    height: 282px;
+    line-height: 282px;
+    background-image: url(../images/design_1_package.jpg);
+}
+
+#design>.container>ul>li>.major>li:nth-child(4) {
+    float: right;
+    width: 610px;
+    height: 238px;
+    margin-top: 10px;
+    line-height: 238px;
+    background-image: url(../images/design_1_web.jpg);
+}
+
+#design>.container>ul>li>.graphic>li:nth-child(1) {
+    width: 300px;
+    height: 260px;
+    margin-right: 10px;
+    line-height: 260px;
+    background-image: url(../images/design_2_package.jpg);
+}
+
+#design>.container>ul>li>.graphic>li:nth-child(2) {
+    width: 300px;
+    height: 260px;
+    margin-right: 10px;
+    line-height: 260px;
+    background-image: url(../images/design_2_infographic1.jpg);
+}
+
+#design>.container>ul>li>.graphic>li:nth-child(3) {
+    float: right;
+    width: 370px;
+    height: 530px;
+    line-height: 530px;
+    background-image: url(../images/design_2_infographic2.jpg);
+}
+
+#design>.container>ul>li>.graphic>li:nth-child(4) {
+    width: 300px;
+    height: 260px;
+    margin: 10px 10px 0 0;
+    line-height: 260px;
+    background-image: url(../images/design_2_pattern.jpg);
+}
+
+#design>.container>ul>li>.graphic>li:nth-child(5) {
+    width: 300px;
+    height: 260px;
+    margin: 10px 10px 0 0;
+    line-height: 260px;
+    background-image: url(../images/design_2_BI.jpg);
+}
+
+#design>.container>ul>li>.gallery>li>a {
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+#design>.container>ul>li>.gallery>li:hover>a,#design>.container>ul>li>.gallery>li>a:focus {
+    text-indent: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#design>button {
+    position: absolute;
+    top: 50%;
+    margin-top: 80px;
+    outline: none;
+    border: none;
+    background: none;
+    width: 21px;
+    height: 41px;
+    text-indent: -9999px;
+    background-image: url(../images/sprite.png);
+}
+
+#design>.prev {
+    left: 70px;
+    background-position: 0 0;
+}
+
+#design>.next {
+    right: 70px;
+    background-position: -31px 0;
+}
+
+#design>.prev:hover,#design>.prev.on {
+    background-position: 0 -42px;
+}
+
+#design>.next:hover,#design>.next.on {
+    background-position: -31px -42px;
+}
+
+/* section - design + popup gallery*/
+#design>.gallery_bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 400;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#design>.gallery_bg>.gallery_img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 410;
+    margin: -375px 0 0 -500px;
+    width: 1000px;
+    height: 750px;
+    background-color: #fff;
+}
+
+#design>.gallery_bg>.gallery_img>.gallClose {
+    display: block;
+    height: 750px;
+    text-indent: -9999px;
+}
+
+/* section - contact */
+#contact {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 860px;
+}
+
+#contact>h2 {
+    position: absolute;
+    right: 50%;
+    top: 200px;
+    margin-right: -450px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 500;
+    color: #425a73;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#contact>.contact_img {
+    position: absolute;
+    right: 50%;
+    top: 300px;
+    margin-right: -985px;
+    width: 800px;
+    height: 375px;
+    background-image: url(../images/배너사진.jpg);
+}
+
+#contact>.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -90px;
+    text-align: center;
+}
+
+#contact>.container>p {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+#contact>.container>p+p:before {
+    content: '/';
+    display: block;
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 30px;
+    color: #425a73;
+    opacity: 0.3;
+}
+
+#contact>.container>p+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#contact>.container>.link {
+    width: 394px;
+    margin: 0 auto;
+}
+
+#contact>.container>.link>a {
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #425a73;
+    border: 1px solid #425a73;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+#contact>.container>.link>a.fileOpen {
+    width: 240px;
+    margin-right: 10px;
+}
+
+#contact>.container>.link>a.git {
+    width: 140px;
+}
+
+#contact>.container>.link>a:hover,#contact>.container>.link>a:focus {
+    color: #fff;
+    background-color: #425a73;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #425a73;
+}
+
+footer>address {
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
